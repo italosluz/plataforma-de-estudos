@@ -46,7 +46,7 @@ function criarNavBar() {
     logo.appendChild(logoImg);
 
     const navLinks = document.createElement("ul");
-    navLinks.classList.add("navbar-links");
+    navLinks.classList.add("navbar-links", "hidden"); // Adiciona a classe "hidden" inicialmente
 
     links.forEach((link) => {
         const li = document.createElement("li");

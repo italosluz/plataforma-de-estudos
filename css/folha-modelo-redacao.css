@@ -1,13 +1,8 @@
-/* ==========================================================================
-   Container e Escopo Local
-   ========================================================================== */
 .container-folha-redacao {
-    --cor-painel: #303030;
-    --cor-botao: #4d4d4d;
-    --cor-botao-hover: #575757;
-    --cor-texto-claro: #ececec;
-    --cor-imprimir: #222222;
-    --cor-imprimir-hover: #121212;
+    --cor-painel: var(--gray-950);
+    --cor-botao: var(--gray-900);
+    --cor-botao-hover: var(--gray-700);
+    --cor-texto-claro: var(--gray-200);
     --folha-padding-x: 18pt;
 
     display: flex;
@@ -24,27 +19,24 @@
     print-color-adjust: exact;
 }
 
-/* ==========================================================================
-   Barra de Controles (oculta na impressão)
-   ========================================================================== */
 .container-folha-redacao .controles {
     background: var(--cor-painel);
     color: var(--cor-texto-claro);
     padding: 16px 20px;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 11px rgb(0 0 0 / 40%);
 }
 
 .container-folha-redacao .controles input {
     width: 64px;
     padding: 5px 6px;
     border: 1px solid #ffffff;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     background: #ffffff;
     color: #202020;
 }
@@ -59,12 +51,13 @@
     cursor: pointer;
     border: 2px solid var(--cor-botao);
     background: var(--cor-botao);
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     color: var(--cor-texto-claro);
     transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        border-color 0.15s ease;
+        background 0.5s ease,
+        color 0.5s ease,
+        border-color 0.5s ease;
+    height: 32px;
 }
 
 .container-folha-redacao .controles button:hover {
@@ -74,20 +67,8 @@
 
 .container-folha-redacao .controles button.ativo,
 .container-folha-redacao .controles button.ativo:hover {
-    background: var(--cor-texto-claro);
-    border-color: var(--cor-texto-claro);
-    color: var(--cor-botao);
-}
-
-.container-folha-redacao .controles button.imprimir {
-    background: var(--cor-imprimir);
-    border-color: var(--cor-imprimir);
-    color: var(--cor-texto-claro);
-}
-
-.container-folha-redacao .controles button.imprimir:hover {
-    background: var(--cor-imprimir-hover);
-    border-color: var(--cor-imprimir-hover);
+    background: var(--cor-botao-hover);
+    border-color: var(--cor-botao-hover);
 }
 
 button.imprimir {
@@ -95,13 +76,6 @@ button.imprimir {
     align-items: center;
 }
 
-button.imprimir > span {
-    margin-right: 10px;
-}
-
-/* ==========================================================================
-   Área de Impressão e Folha A4
-   ========================================================================== */
 #area-impressao {
     display: flex;
     flex-direction: column;
@@ -120,9 +94,6 @@ button.imprimir > span {
     flex-direction: column;
 }
 
-/* ==========================================================================
-   Cabeçalho da Folha (Logo + Aluno + Título)
-   ========================================================================== */
 #area-impressao .topo-logo {
     padding: 21pt 0;
     display: flex;
@@ -182,9 +153,6 @@ button.imprimir > span {
     letter-spacing: 1px;
 }
 
-/* ==========================================================================
-   Grade de Linhas
-   ========================================================================== */
 #area-impressao .grade {
     padding: 0 var(--folha-padding-x);
     flex-shrink: 0;
@@ -217,9 +185,6 @@ button.imprimir > span {
     border-bottom: 1pt solid #888888;
 }
 
-/* ==========================================================================
-   Rodapé da Folha
-   ========================================================================== */
 #area-impressao .rodape {
     margin-top: auto;
     padding: 14pt var(--folha-padding-x) 0;
@@ -242,9 +207,6 @@ button.imprimir > span {
     line-height: 1;
 }
 
-/* ==========================================================================
-   Impressão (A4)
-   ========================================================================== */
 @page {
     size: A4;
     margin: 10mm 12mm;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,24 +32,21 @@
         />
         <link rel="stylesheet" href="../css/base.css" />
         <link rel="stylesheet" href="../css/navbar.css" />
-        <link rel="stylesheet" href="../css/folha-redacao.css" />
-        <link rel="stylesheet" href="../css/menu-escolhe.css" />
+        <link rel="stylesheet" href="../css/folha-modelo-redacao.css" />
+        <link rel="stylesheet" href="../css/submenu-redacao.css" />
     </head>
 
     <body>
         <header>
             <nav id="navbar"></nav>
         </header>
-        <div id="menu-escolhe">
-            <h1 id="menu-escolhe-titulo">Temas de Redação</h1>
-            <div id="menu-escolhe-buttons">
-                <button data-secao="temas">
-                    Temas de Redação
-                </button>
+        <div id="submenu-redacao">
+            <h1 id="submenu-redacao-titulo">Temas de Redação</h1>
+            <div id="submenu-redacao-botoes">
+                <button data-secao="temas">Temas de Redação</button>
                 <button data-secao="aulas">Aulas de Redação</button>
-                <button data-secao="folha-modelo">
-                    Gerar Folha de Redação
-                </button>
+                <button data-secao="registros">Registros de Redação</button>
+                <button data-secao="folha-modelo">Gerar Folha de Redação</button>
             </div>
         </div>
         <main id="conteudo-principal"></main>
@@ -67,24 +64,9 @@
                         min="1"
                         max="60"
                     />
-                    <button
-                        type="button"
-                        data-linhas="30"
-                    >
-                        ENEM (30)
-                    </button>
-                    <button
-                        type="button"
-                        data-linhas="33"
-                    >
-                        Fuvest (33)
-                    </button>
-                    <button
-                        type="button"
-                        data-linhas="22"
-                    >
-                        Unicamp (22)
-                    </button>
+                    <button type="button" data-linhas="30">ENEM (30)</button>
+                    <button type="button" data-linhas="33">Fuvest (33)</button>
+                    <button type="button" data-linhas="22">Unicamp (22)</button>
                     <button
                         type="button"
                         class="imprimir"
@@ -141,8 +123,12 @@
             </div>
         </template>
         <template id="redacao-aulas"></template>
+        <template id="redacao-registros"></template>
         <script src="../js/components/navbar.js"></script>
-        <script src="../js/components/folha-redacao-menu-escolhe.js" type="module"></script>
-        <script src="../js/components/folha-redacao.js" type="module"></script>
+        <script
+            src="../js/components/submenu-redacao.js"
+            type="module"
+        ></script>
+        <script src="../js/components/folha-modelo-redacao.js" type="module"></script>
     </body>
 </html>
