@@ -43,7 +43,7 @@
 
 .container-folha-redacao .controles input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 0 2px #ffffff59;
 }
 
 .container-folha-redacao .controles button {

@@ -26,8 +26,25 @@ const links = [
     },
     {
         icone: "settings",
-        texto: "Configurações",
-        href: "#"
+        texto: "Mais Opções",
+        href: "#",
+        submenu: [
+            {
+                icone: "person",
+                texto: "Perfil",
+                href: "#",
+            },
+            {
+                icone: "info",
+                texto: "Sobre o Professor",
+                href: "#",
+            },
+            {
+                icone: "settings",
+                texto: "Configurações",
+                href: "#",
+            }
+        ]
     }
 ];
 
@@ -53,12 +70,38 @@ function criarNavBar() {
         const a = document.createElement("a");
         a.href = link.href;
         a.textContent = link.texto;
+
         const icon = document.createElement("span");
         icon.classList.add("material-symbols-rounded", "navbar-icon");
         icon.textContent = link.icone;
 
+        if (link.submenu) {
+            const submenu = document.createElement("ul");
+            submenu.classList.add("navbar-submenu");
+
+            link.submenu.forEach(sublink => {
+                const subLi = document.createElement("li");
+                const subA = document.createElement("a");
+                const subIcon = document.createElement("span");
+                subIcon.classList.add("material-symbols-rounded", "navbar-icon");
+                subIcon.textContent = sublink.icone;
+                subA.href = sublink.href;
+                subA.textContent = sublink.texto;
+
+                subA.prepend(subIcon); // Adiciona o ícone antes do texto
+                subLi.appendChild(subA);
+                submenu.appendChild(subLi);
+                submenu.classList.add("hidden"); // Inicialmente esconde o submenu
+                li.appendChild(submenu); // Adiciona o submenu ao item de menu principal
+            })
+
+            li.addEventListener("click", () => {
+                submenu.classList.toggle("hidden"); // Alterna a visibilidade do submenu
+            })
+        }
+
         a.prepend(icon); // Adiciona o ícone antes do texto
-        li.appendChild(a);
+        li.prepend(a);
         navLinks.appendChild(li);
     });
 
