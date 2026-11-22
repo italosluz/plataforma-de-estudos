@@ -20,6 +20,7 @@ export function folhaRedacao() {
             // Lê o valor de data-linhas (que vem como texto), converte para número
             // e adiciona a classe "ativo" se for igual a qtd (ou remove se for diferente)
             btn.classList.toggle("ativo", Number(btn.dataset.linhas) === qtd);
+            console.log(Number(btn.dataset.linhas), qtd);
         });
     }
 
@@ -91,7 +92,7 @@ export function folhaRedacao() {
     botoesPreset.forEach((botao) => {
         botao.addEventListener("click", (event) => {
             console.log("Oi")
-            const quantidade = event.target.dataset.linhas;
+            const quantidade = Number(event.target.dataset.linhas);
             inputLinhas.value = quantidade;
             gerarLinhas(quantidade);
         });
