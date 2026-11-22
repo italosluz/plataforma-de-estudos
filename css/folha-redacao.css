@@ -1,0 +1,294 @@
+/* ==========================================================================
+   Container e Escopo Local
+   ========================================================================== */
+.container-folha-redacao {
+    --cor-painel: #303030;
+    --cor-botao: #4d4d4d;
+    --cor-botao-hover: #575757;
+    --cor-texto-claro: #ececec;
+    --cor-imprimir: #222222;
+    --cor-imprimir-hover: #121212;
+    --folha-padding-x: 18pt;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container-folha-redacao,
+.container-folha-redacao * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* ==========================================================================
+   Barra de Controles (oculta na impressão)
+   ========================================================================== */
+.container-folha-redacao .controles {
+    background: var(--cor-painel);
+    color: var(--cor-texto-claro);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.container-folha-redacao .controles input {
+    width: 64px;
+    padding: 5px 6px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #202020;
+}
+
+.container-folha-redacao .controles input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.container-folha-redacao .controles button {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 2px solid var(--cor-botao);
+    background: var(--cor-botao);
+    border-radius: 4px;
+    color: var(--cor-texto-claro);
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.container-folha-redacao .controles button:hover {
+    background: var(--cor-botao-hover);
+    border-color: var(--cor-botao-hover);
+}
+
+.container-folha-redacao .controles button.ativo,
+.container-folha-redacao .controles button.ativo:hover {
+    background: var(--cor-texto-claro);
+    border-color: var(--cor-texto-claro);
+    color: var(--cor-botao);
+}
+
+.container-folha-redacao .controles button.imprimir {
+    background: var(--cor-imprimir);
+    border-color: var(--cor-imprimir);
+    color: var(--cor-texto-claro);
+}
+
+.container-folha-redacao .controles button.imprimir:hover {
+    background: var(--cor-imprimir-hover);
+    border-color: var(--cor-imprimir-hover);
+}
+
+button.imprimir {
+    display: flex;
+    align-items: center;
+}
+
+button.imprimir > span {
+    margin-right: 10px;
+}
+
+/* ==========================================================================
+   Área de Impressão e Folha A4
+   ========================================================================== */
+#area-impressao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+#area-impressao .folha {
+    --altura-linha: 20pt;
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    padding: 10mm 12mm;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Cabeçalho da Folha (Logo + Aluno + Título)
+   ========================================================================== */
+#area-impressao .topo-logo {
+    padding: 21pt 0;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#area-impressao img.logo {
+    max-width: 150px;
+    max-height: 42pt;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#area-impressao .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 var(--folha-padding-x) 14pt;
+    flex-shrink: 0;
+}
+
+#area-impressao .campo-aluno {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #292929;
+    border-radius: 18px 3px 18px 3px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #292929;
+}
+
+#area-impressao .titulo {
+    color: #161616;
+    line-height: 1.05;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#area-impressao .titulo small {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #7b7b7b;
+    font-weight: normal;
+}
+
+#area-impressao .titulo span {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Grade de Linhas
+   ========================================================================== */
+#area-impressao .grade {
+    padding: 0 var(--folha-padding-x);
+    flex-shrink: 0;
+}
+
+#area-impressao .linha {
+    display: flex;
+    width: 100%;
+    height: var(--altura-linha);
+    flex-shrink: 0;
+    break-inside: avoid;
+}
+
+#area-impressao .numero {
+    width: 18pt;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 6pt;
+    padding-bottom: 1pt;
+    font-size: 9pt;
+    line-height: 1;
+    font-weight: 300;
+    color: #202020;
+    user-select: none;
+}
+
+#area-impressao .traco {
+    flex: 1;
+    border-bottom: 1pt solid #888888;
+}
+
+/* ==========================================================================
+   Rodapé da Folha
+   ========================================================================== */
+#area-impressao .rodape {
+    margin-top: auto;
+    padding: 14pt var(--folha-padding-x) 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #535353;
+    flex-shrink: 0;
+}
+
+#area-impressao .rodape > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2pt;
+}
+
+#area-impressao .rodape .material-symbols-rounded {
+    font-size: 14pt;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   Impressão (A4)
+   ========================================================================== */
+@page {
+    size: A4;
+    margin: 10mm 12mm;
+}
+
+@media print {
+    body
+        *:not(#area-impressao):not(#area-impressao *):not(
+            :has(#area-impressao)
+        ) {
+        display: none !important;
+    }
+
+    html,
+    body,
+    body :has(#area-impressao) {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #area-impressao {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    #area-impressao .folha {
+        display: flex !important;
+        width: 100% !important;
+        height: 275mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        break-after: page;
+        page-break-after: always;
+    }
+
+    #area-impressao .folha:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+}

@@ -1,0 +1,87 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Logo na esquerda, links na direita */
+    align-items: center;
+    /* Centraliza verticalmente */
+    background-color: #2c2c2c;
+    padding: 1rem 4rem;
+    font-family: sans-serif;
+}
+
+.navbar .navbar-logo {
+    text-decoration: none;
+}
+
+.navbar-logo img {
+    width: 150px;
+    /* Ajuste o tamanho conforme necessário */
+}
+
+.navbar-links {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    display: flex;
+    /* Coloca os links lado a lado */
+    gap: 1.5rem;
+    /* Espaço entre cada link */
+}
+
+.navbar-links a {
+    color: #ececec;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar-icon {
+    width: 24px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px;
+}
+
+.navbar-links .navbar-icon {
+    display: block;
+    margin: 5px auto;
+    /* Centraliza o ícone dentro do link */
+}
+
+.navbar a:hover,
+.navbar a.ativo {
+    color: #b8b8b8;
+}
+
+@media (width >= 1200px) {
+    #navbar-menu {
+        display: none;
+    }
+    .navbar-links {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 1.5em;
+        position: absolute;
+        top: 60px;
+        right: 70px;
+        background: #25242482;
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        box-shadow: 4px 3px 10px 0px #0000004f;
+    }
+
+    .navbar-links a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 250px;
+    }
+    .navbar-links span {
+        margin: 0 10px !important;
+    }
+}

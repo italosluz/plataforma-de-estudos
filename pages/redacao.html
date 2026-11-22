@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Professor Ítalo Luz – Plataforma de Estudos</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../assets/icons/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/icons/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/icons/favicon/favicon-16x16.png"
+        />
+        <link
+            rel="shortcut icon"
+            href="../assets/icons/favicon/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,-25&icon_names=event_available,table,checklist,edit_line,monitoring,settings,link,commit,favorite,download,menu"
+        />
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/navbar.css" />
+        <link rel="stylesheet" href="../css/folha-redacao.css" />
+        <link rel="stylesheet" href="../css/menu-escolhe.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav id="navbar"></nav>
+        </header>
+        <div id="menu-escolhe">
+            <h1 id="menu-escolhe-titulo">Temas de Redação</h1>
+            <div id="menu-escolhe-buttons">
+                <button data-secao="temas">
+                    Temas de Redação
+                </button>
+                <button data-secao="aulas">Aulas de Redação</button>
+                <button data-secao="folha-modelo">
+                    Gerar Folha de Redação
+                </button>
+            </div>
+        </div>
+        <main id="conteudo-principal"></main>
+        <template id="redacao-temas">
+            <section></section>
+        </template>
+        <template id="redacao-folha-modelo">
+            <div class="container-folha-redacao">
+                <div class="controles">
+                    <label for="qtdLinhas">Linhas:</label>
+                    <input
+                        type="number"
+                        id="qtdLinhas"
+                        value="30"
+                        min="1"
+                        max="60"
+                    />
+                    <button
+                        type="button"
+                        data-linhas="30"
+                    >
+                        ENEM (30)
+                    </button>
+                    <button
+                        type="button"
+                        data-linhas="33"
+                    >
+                        Fuvest (33)
+                    </button>
+                    <button
+                        type="button"
+                        data-linhas="22"
+                    >
+                        Unicamp (22)
+                    </button>
+                    <button
+                        type="button"
+                        class="imprimir"
+                        onclick="window.print()"
+                    >
+                        <span class="material-symbols-rounded">download</span>
+                        Baixar folha modelo
+                    </button>
+                </div>
+
+                <div id="area-impressao">
+                    <div class="folha">
+                        <div class="topo-logo">
+                            <img
+                                src="../assets/icons/logo-escopo-claro.png"
+                                alt="Logo do Site"
+                                class="logo"
+                            />
+                        </div>
+
+                        <div class="topo">
+                            <div class="campo-aluno">Aluno(a):</div>
+
+                            <div class="titulo">
+                                <small>Folha de</small>
+                                <span>Redação</span>
+                            </div>
+                        </div>
+
+                        <div class="grade"></div>
+
+                        <div class="rodape">
+                            <span>
+                                <span class="material-symbols-rounded"
+                                    >link</span
+                                >
+                                www.app.italoluz.com.br
+                            </span>
+                            <span>
+                                <span class="material-symbols-rounded"
+                                    >favorite</span
+                                >
+                                instagram.com/italosiluz
+                            </span>
+                            <span>
+                                <span class="material-symbols-rounded"
+                                    >commit</span
+                                >
+                                github.com/italosluz
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="redacao-aulas"></template>
+        <script src="../js/components/navbar.js"></script>
+        <script src="../js/components/folha-redacao-menu-escolhe.js" type="module"></script>
+        <script src="../js/components/folha-redacao.js" type="module"></script>
+    </body>
+</html>
