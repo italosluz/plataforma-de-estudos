@@ -1,0 +1,93 @@
+[
+    {
+        "id": 0,
+        "proposta": "Desafios para a consolidação da cultura da reciclagem no cotidiano brasileiro",
+        "eixo": "Meio Ambiente e Sustentabilidade",
+        "banca": "",
+        "ano": 2026,
+        "autor": "Adaptado de Corrige Aqui (Brasil Escola).",
+        "ilustracao": "https://curitibadegraca.com.br/wp-content/uploads/2020/01/planeta-copy.jpg",
+        "textos_motivadores": [
+            {
+                "tipo": "texto",
+                "titulo": "",
+                "conteudo": [
+                    "A reciclagem é um conjunto de técnicas de reaproveitamento de materiais descartados, reintroduzindo-os no ciclo produtivo. É uma das alternativas de tratamento de resíduos sólidos (lixo) mais vantajosas, tanto do ponto de vista ambiental quanto do social: ela reduz o consumo de recursos naturais, poupa energia e água, diminui o volume de lixo e dá emprego a milhares de pessoas.",
+                    "É um processo industrial que começa em casa. A correta separação desses materiais em nossas casas e o encaminhamento para catadores ou empresas recicladoras permite que eles retornem para o processo produtivo e diminui o volume de lixo acumulado em aterros e lixões. É uma questão de hábito e de percepção: precisamos modificar nosso olhar sobre o que chamamos de \"lixo\". Cerca de 30% de todo o \"lixo\" é composto de materiais recicláveis como papel, vidro, plástico e latas, e todos esses materiais têm valor de mercado, pois são reaproveitados como matéria-prima no processo de fabricação de novos produtos."
+                ],
+                "fonte": "https://www.gov.br/mma/pt-br/assuntos/educacao-ambiental/glossario-ea/o-que-e-reciclagem",
+                "referencia": "Governo Federal. Ministério do Meio Ambiente. O que é reciclagem. Disponível em: https://www.gov.br. Acesso em: 24 nov. 2026."
+            },
+            {
+                "tipo": "texto",
+                "titulo": "",
+                "conteudo": [
+                    "A prática da reciclagem ainda é bastante restrita no Brasil, o que entra em contradição com a quantidade de lixo que é produzida diariamente no país e o total de resíduos recicláveis encontrados no meio desses descartes. Dados recentes divulgados pela Associação Brasileira de Empresas de Limpeza Pública e Resíduos Especiais (Abrelpe) mostram que pouco mais de um terço dos resíduos sólidos produzidos no Brasil são recicláveis. Esse material é composto em sua maioria por plástico, papel e papelão. Apesar disso, somente 4% dos resíduos recicláveis passam, de fato, por esse processo.",
+                    "Existe um instrumento que entrou em voga no ano de 2022 e que pretende melhorar a gestão dos resíduos sólidos no país, tendo revisto suas metas mais recentes para a reciclagem e indicado que, até 2040, a taxa de reciclagem brasileira deverá ser de 48%. Trata-se do Plano Nacional dos Resíduos Sólidos (Planares), que reúne estratégias para a gestão e gerenciamento dos resíduos em escala municipal, estadual e federal, concatenando empresas privadas e o setor público nas ações previstas.",
+                    "Desde 2010, entretanto, o Brasil possui uma lei específica que versa sobre a gestão e manejo dos recursos sólidos e temas correlatos como a coleta seletiva e a reciclagem no país, que é a Política Nacional de Resíduos Sólidos (Lei nº 12.305, de 2 de agosto de 2010)."
+                ],
+                "fonte": "https://brasilescola.uol.com.br/biologia/reciclagem.htm#Quais+s%C3%A3o+os+tipos+de+reciclagem%3F",
+                "referencia": "Brasil Escola. Reciclagem. Disponível em: https://brasilescola.uol.com.br. Acesso em: 24 nov. 2026."
+            },
+            {
+                "tipo": "texto",
+                "titulo": "",
+                "conteudo": [
+                    "As catadoras e os catadores de materiais reutilizáveis e recicláveis desempenham papel fundamental na implementação da Política Nacional de Resíduos Sólidos (PNRS), com destaque para a atuação nas atividades da coleta seletiva, triagem, classificação, processamento e comercialização dos resíduos reutilizáveis e recicláveis, contribuindo de forma significativa para a cadeia produtiva da reciclagem.",
+                    "A atuação das catadoras e dos catadores de materiais reutilizáveis e recicláveis, cuja atividade profissional é reconhecida pelo Ministério do Trabalho e Emprego desde 2002, segundo a Classificação Brasileira de Ocupações (CBO), contribui para o aumento da vida útil dos aterros sanitários e para a diminuição da demanda pela extração dos recursos naturais, na medida em que abastece as indústrias recicladoras para reinserção de materiais em suas ou em outras cadeias produtivas, em substituição ao uso de matérias-primas virgem, além de contribuir com a redução das emissões de gases do efeito estufa."
+                ],
+                "fonte": "https://www.gov.br/mma/pt-br/assuntos/meio-ambiente-urbano-recursos-hidricos-qualidade-ambiental/Catadoras%20e%20Catadores",
+                "referencia": ""
+            },
+            {
+                "tipo": "imagem",
+                "titulo": "Charge lixo",
+                "conteudo": [
+                    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7DgxzRPjjYCnyRfWANXwMHGnyxbfAY7bPYl9FkzBe5b2bOl1ameVJ1gL3kEigs7MMBbG-sIZuy-_1sMbMLmKLYWZeGqPb_ugei6FmsTrAcvvA2h-MctnHsZUQzvBo_7RfM6ZBsdY054s/s400/lixo.jpg"
+                ],
+                "fonte": "https://gilmaronline.blogspot.com/2018/01/charge-lixo.html",
+                "referencia": ""
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "proposta": "Caminhos para democratizar o acesso à arte no Brasil",
+        "eixo": "Cultura, Arte e Identidade",
+        "banca": "",
+        "ano": 2026,
+        "autor": "Plataforma Professor Ferreto",
+        "ilustracao": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUnqM3_ckWHW83mjVtcjakvcKdOyafxN8k4Qg7I6sK2EGvfXOnwzqbY0Q&s=10",
+        "textos_motivadores": [
+            {
+                "tipo": "texto",
+                "titulo": "",
+                "conteudo": [
+                    "Historicamente o consumo de arte é elitizado, segundo Ana Gonçalves Magalhães, diretora e curadora do Museu de Arte Contemporânea (MAC) da Universidade de São Paulo (USP). Quando se discute um conceito mais estrito e eurocêntrico de arte – aquele que foi concebido a partir da primeira era moderna com a constituição dos gabinetes de curiosidade e que se desdobrou depois nas ditas belas-artes – essa elitização pode ser vista, ainda que termo \"consumo\" seja anacrônico no contexto da primeira era moderna, anterior à consolidação do mercado da arte no século 19, explica Ana. \"No que chamamos de sistema de arte (que envolve as instâncias do mercado de arte e as instituições artísticas tradicionais), ele continuou a ser elitizado, mesmo hoje em dia\", completa.",
+                    "De acordo com Gonçalves, a consolidação dos museus de arte ao longo do século 20 veio em paralelo a um debate muito relevante sobre a educação pela arte. Nesse ponto, destaca-se a Mesa de Santiago de 1972, na qual os membros debateram o papel dos museus da América Latina. Gonçalves conta que \"uma tomada de decisão muito importante foi justamente a de que os museus devem estar abertos e a serviço da sociedade, têm a função de educar e serem capazes de representar a diversidade social. Embora ainda haja questões em relação ao acesso de todos aos museus, há uma política internacional em que os museus do mundo, através de sua ação educativa, devem ser inclusivos\"."
+                ],
+                "fonte": "http://jornalismojunior.com.br/democratizacao-da-arte-dentro-e-fora-dos-museus",
+                "referencia": "Jornalismo Júnior. Democratização da arte dentro e fora dos museus. Disponível em: http://jornalismojunior.com.br. Acesso em: 24 nov. 2026."
+            },
+            {
+                "tipo": "imagem",
+                "titulo": "",
+                "conteudo": [
+                    "https://apcefse.org.br/wp-content/uploads/2020/09/CardNoticia_600x400px-03.09.png"
+                ],
+                "fonte": "",
+                "referencia": ""
+            },
+            {
+                "tipo": "texto",
+                "titulo": "",
+                "conteudo": [
+                    "O Eu Faço Cultura é uma iniciativa da Fenae e das Apcefs que tem como objetivo democratizar o acesso à cultura a milhares de brasileiros. Além disso, conta com o apoio dos empregados Caixa e da Lei do Incentivo à Cultura.  O Programa começou em 2006 e, há cinco anos, migrou para uma plataforma digital. Esse formato viabilizou o atendimento a todos os estados brasileiros e ao Distrito Federal.  A plataforma compra produtos como livros e ingressos de espetáculos e cinema de pequenos e médios produtores culturais, e os distribui gratuitamente para pessoas de baixa renda, beneficiários de programas sociais do governo, alunos de escolas públicas, MEIs, idosos, pessoas com deficiência e ONGs de caráter beneficente. ",
+                    "Dessa maneira, os produtores culturais ganham visibilidade e são amparados, ao mesmo tempo que pessoas em estado de vulnerabilidade social passam a ter a arte ao seu alcance.  Quem é empregado Caixa já pode destinar até 6% do seu imposto de renda (IR) para apoiar a democratização do acesso à cultura. Se você tem imposto a pagar, a receber ou saldo inexistente, pode participar do Programa. Basta ter acesso à plataforma Mundo Caixa e fazer a declaração no modelo completo. O valor arrecadado será direcionado à plataforma do Eu Faço Cultura."
+                ],
+                "fonte": "https://apcefse.org.br/apoie-a-arte-participando-do-eu-faco-cultura/",
+                "referencia": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,388 @@
+#redacao-temas-conteudo {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+.grid-redacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 24px;
+}
+
+#conteudo-principal {
+    --card-bg: var(--bg-surface);
+    --card-borda: var(--border-subtle);
+    --card-texto: var(--text-primary);
+    --card-texto-secundario: var(--text-secondary);
+    --card-destaque: var(--gray-200);
+    --card-destaque-suave: var(--brand-secondary);
+}
+
+/* ===== Cards ===== */
+.card-redacao-tema {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-borda);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card-redacao-tema:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.card-redacao-capa {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--bg-surface);
+}
+
+.card-redacao-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.card-redacao-tema:hover .card-redacao-capa img {
+    transform: scale(1.04);
+}
+
+.card-redacao-corpo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.card-redacao-eixo {
+    align-self: flex-start;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--card-destaque);
+    background-color: var(--brand-primary);
+    padding: 5px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+}
+
+.card-redacao-eixo:empty {
+    display: none;
+}
+
+.card-redacao-titulo {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--card-texto);
+}
+
+.card-redacao-tags {
+    margin-top: auto;
+    border-top: 1px solid var(--card-borda);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-redacao-meta {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--card-texto-secundario);
+}
+
+.card-redacao-meta:has(.card-redacao-tag:empty) {
+    display: none;
+}
+
+.card-redacao-label {
+    font-weight: 600;
+    color: var(--card-texto);
+}
+
+.card-redacao-btn {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: var(--radius-lg);
+    background-color: var(--brand-primary);
+    color: var(--card-destaque);
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        filter 0.2s ease,
+        transform 0.15s ease;
+}
+
+.card-redacao-btn:hover {
+    filter: brightness(1.1);
+}
+
+.card-redacao-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== Dialog ===== */
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+.dialog-redacao {
+    padding: 0;
+    margin: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    width: calc(100% - 32px);
+    max-width: 720px;
+    max-height: 85vh;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+    overflow: hidden;
+}
+
+.dialog-redacao[open] {
+    animation: abrirDialog 0.22s ease-out;
+}
+
+.dialog-redacao::backdrop {
+    background-color: rgb(0 0 0 / 55%);
+    backdrop-filter: blur(4px);
+}
+
+.dialog-redacao-conteudo {
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+.dialog-redacao-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.dialog-redacao-titulo {
+    margin: 10px 0 0;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    color: var(--text-primary);
+}
+
+.dialog-redacao-fechar {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.dialog-redacao-fechar:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.dialog-redacao-corpo {
+    padding: 20px 24px;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    scrollbar-width: thin;
+    scrollbar-color: #747474 var(--bg-surface);
+}
+
+.dialog-redacao-rodape {
+    padding: 14px 24px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--bg-surface);
+}
+
+.dialog-redacao-btn-secundario,
+.dialog-redacao-btn-primario {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        filter 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.dialog-redacao-btn-primario, .dialog-redacao-btn-secundario  {
+    border: none;
+    background-color: var(--gray-900);
+    color: var(--gray-200);
+}
+
+.dialog-redacao-btn-primario:hover, .dialog-redacao-btn-secundario:hover {
+    filter: brightness(1.1);
+}
+
+.dialog-redacao-btn-primario:active {
+    transform: scale(0.98);
+}
+
+.dialog-redacao-btn-primario .material-symbols-rounded {
+    font-size: 1.15rem;
+}
+
+/* ===== Textos motivadores ===== */
+.motivador-bloco {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.motivador-bloco:first-child {
+    padding-top: 0;
+}
+
+.motivador-bloco:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.motivador-rotulo {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.motivador-titulo {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.motivador-paragrafo {
+    margin: 0 0 12px;
+    text-align: justify;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    text-indent: 32px;
+}
+
+.motivador-paragrafo:last-of-type {
+    margin-bottom: 0;
+}
+
+.motivador-figura {
+    margin: 12px 0;
+    text-align: center;
+}
+
+.motivador-imagem {
+    max-width: 100%;
+    max-height: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+}
+
+.motivador-rodape {
+    margin-top: 12px;
+    padding-top: 8px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.motivador-referencia {
+    margin: 0;
+}
+
+.motivador-fonte {
+    align-self: flex-start;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.motivador-fonte:hover {
+    text-decoration: underline;
+}
+
+/* ===== Acessibilidade (Foco via teclado) ===== */
+.card-redacao-btn:focus-visible,
+.dialog-redacao-fechar:focus-visible,
+.dialog-redacao-btn-secundario:focus-visible,
+.dialog-redacao-btn-primario:focus-visible,
+.motivador-fonte:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+}
+
+/* ===== Animações e Responsividade ===== */
+@keyframes abrirDialog {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .dialog-redacao-topo,
+    .dialog-redacao-corpo,
+    .dialog-redacao-rodape {
+        padding-inline: 16px;
+    }
+
+    .motivador-paragrafo {
+        text-indent: 20px;
+        text-align: left;
+    }
+}

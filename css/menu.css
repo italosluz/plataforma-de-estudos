@@ -41,7 +41,7 @@ header {
 }
 
 .navbar-links a:hover {
-    color: var(--brand-hover);
+    color: var(--brand-secondary);
 }
 
 .navbar-icon {
@@ -60,11 +60,11 @@ header {
     right: 90px;
     list-style: none;
     width: 250px;
-    background: #25242482;
     padding: 10px;
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(100px);
     box-shadow: 4px 3px 10px 0px #0000004f;
+    background: color-mix(in srgb, var(--bg-page) 80%, transparent);
 }
 
 .navbar-submenu a {
@@ -94,11 +94,11 @@ header {
         position: absolute;
         top: 60px;
         right: 70px;
-        background: #25242482;
         padding: 20px;
         border-radius: var(--radius-lg);
         backdrop-filter: blur(5px);
         box-shadow: 4px 3px 10px 0px #0000004f;
+        background: color-mix(in srgb, var(--bg-page) 80%, transparent);
     }
 
     .navbar-links a {
@@ -113,14 +113,17 @@ header {
     }
 
     .navbar-submenu {
-    position: static;
-    list-style: none;
-    width: 100%;
-    background: var(--bg-page);
-    padding: 10px;
-    border-radius: var(--radius-lg);
-    box-shadow: none;
-    margin-top: 10px;
-}
+        position: static;
+        list-style: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: var(--radius-lg);
+        box-shadow: none;
+        margin-top: 10px;
+        background: none;
+    }
 
+    .navbar-submenu a {
+        border-bottom: var(--border-subtle) solid 2px;
+    }
 }

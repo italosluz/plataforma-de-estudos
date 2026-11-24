@@ -49,7 +49,8 @@
   --border-strong:  var(--gray-300);
 
   /* Ações / Destaques */
-  --brand-primary:  var(--gray-800);
+  --brand-primary:  #1c1c1c;
+  --brand-secondary: #0a0a0a;
   --brand-hover:    var(--gray-700);
 }
 
@@ -71,7 +72,8 @@
   --border-strong:  var(--gray-600);
 
   /* Ações / Destaques */
-  --brand-primary:  var(--gray-500);
+  --brand-primary:  #292929;
+  --brand-secondary: #585858;
   --brand-hover:    var(--gray-400);
 }
 

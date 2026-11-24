@@ -31,9 +31,10 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,-25&icon_names=event_available,table,checklist,edit_line,monitoring,settings,link,commit,favorite,download,menu,person,info"
         />
         <link rel="stylesheet" href="../css/base.css" />
-        <link rel="stylesheet" href="../css/navbar.css" />
+        <link rel="stylesheet" href="../css/menu.css" />
         <link rel="stylesheet" href="../css/folha-modelo-redacao.css" />
         <link rel="stylesheet" href="../css/submenu-redacao.css" />
+        <link rel="stylesheet" href="../css/redacao-temas-bloco.css" />
     </head>
 
     <body>
@@ -46,12 +47,110 @@
                 <button data-secao="temas">Temas de Redação</button>
                 <button data-secao="aulas">Aulas de Redação</button>
                 <button data-secao="registros">Registros de Redação</button>
-                <button data-secao="folha-modelo">Gerar Folha de Redação</button>
+                <button data-secao="folha-modelo">
+                    Gerar Folha de Redação
+                </button>
             </div>
         </div>
         <main id="conteudo-principal"></main>
         <template id="redacao-temas">
-            <section></section>
+            <section
+                id="redacao-temas-conteudo"
+                class="grid-redacoes"
+            ></section>
+
+            <template id="template-card-redacao">
+                <article class="card-redacao-tema">
+                    <div class="card-redacao-capa">
+                        <img data-card="imagem" src="" alt="" loading="lazy" />
+                    </div>
+
+                    <div class="card-redacao-corpo">
+                        <span class="card-redacao-eixo" data-card="eixo"></span>
+                        <h2 class="card-redacao-titulo" data-card="titulo"></h2>
+
+                        <div class="card-redacao-tags">
+                            <p class="card-redacao-meta">
+                                <span class="card-redacao-label">Autor:</span>
+                                <span
+                                    class="card-redacao-tag"
+                                    data-card="autor"
+                                ></span>
+                            </p>
+                            <p class="card-redacao-meta">
+                                <span class="card-redacao-label">Banca:</span>
+                                <span
+                                    class="card-redacao-tag"
+                                    data-card="banca"
+                                ></span>
+                            </p>
+                            <p class="card-redacao-meta">
+                                <span class="card-redacao-label">Ano:</span>
+                                <span
+                                    class="card-redacao-tag"
+                                    data-card="ano"
+                                ></span>
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="card-redacao-btn"
+                            data-abrir-tema
+                        >
+                            Ver proposta completa
+                        </button>
+                    </div>
+                </article>
+            </template>
+
+            <dialog class="dialog-redacao" id="dialog-redacao">
+                <div class="dialog-redacao-conteudo">
+                    <header class="dialog-redacao-topo">
+                        <div>
+                            <span
+                                class="card-redacao-eixo"
+                                data-dialog="eixo"
+                            ></span>
+                            <h3
+                                class="dialog-redacao-titulo"
+                                data-dialog="titulo"
+                            ></h3>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="dialog-redacao-fechar"
+                            data-fechar-dialog
+                            aria-label="Fechar janela"
+                        >
+                            &times;
+                        </button>
+                    </header>
+
+                    <div class="dialog-redacao-corpo" data-dialog="corpo"></div>
+
+                    <footer class="dialog-redacao-rodape">
+                        <button
+                            type="button"
+                            class="dialog-redacao-btn-primario"
+                            data-imprimir-tema
+                        >
+                            <span class="material-symbols-rounded"
+                                >download</span
+                            >
+                            Imprimir / Salvar PDF
+                        </button>
+                        <button
+                            type="button"
+                            class="dialog-redacao-btn-secundario"
+                            data-fechar-dialog
+                        >
+                            Fechar
+                        </button>
+                    </footer>
+                </div>
+            </dialog>
         </template>
         <template id="redacao-folha-modelo">
             <div class="container-folha-redacao">
@@ -126,11 +225,18 @@
         </template>
         <template id="redacao-aulas"></template>
         <template id="redacao-registros"></template>
-        <script src="../js/components/navbar.js"></script>
+        <script src="../js/components/menu.js" type="module"></script>
         <script
             src="../js/components/submenu-redacao.js"
             type="module"
         ></script>
-        <script src="../js/components/folha-modelo-redacao.js" type="module"></script>
+        <script
+            src="../js/components/folha-modelo-redacao.js"
+            type="module"
+        ></script>
+        <script
+            src="../js/components/redacao-temas-bloco.js"
+            type="module"
+        ></script>
     </body>
 </html>

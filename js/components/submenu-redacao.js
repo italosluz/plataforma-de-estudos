@@ -1,11 +1,12 @@
 import { folhaRedacao } from "./folha-modelo-redacao.js";
+import { redacaoTemasBloco } from "./redacao-temas-bloco.js";
 
 const conteudoPrincipal = document.querySelector("#conteudo-principal");
 const secaoNome = document.querySelector("#submenu-redacao-titulo");
 const secaoBotoes = document.querySelector("#submenu-redacao-botoes");
 
 const secoesRedacao = {
-    "temas": { titulo: "Temas de Redação" },
+    "temas": { titulo: "Temas de Redação", aoCarregar: redacaoTemasBloco },
     "folha-modelo": { titulo: "Gerar Folha Modelo de Redação", aoCarregar: folhaRedacao},
     "registros": { titulo: "Meus Registros de Redação" },
     "aulas": { titulo: "Aulas de Redação" },

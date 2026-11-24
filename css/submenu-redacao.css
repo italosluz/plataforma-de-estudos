@@ -27,10 +27,10 @@
     max-width: 100%;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #747474 #303030;
+    scrollbar-color: #747474 var(--bg-page);
 }
 
 #submenu-redacao-botoes button:hover,
 .submenu-redacao-ativo {
-    border-bottom: 3px solid var(--brand-primary);
+    border-bottom: 3px solid var(--brand-secondary);
 }
