@@ -261,7 +261,7 @@ button.imprimir {
 .controles {
     position: sticky !important;
     top: 100px;
-    z-index: 100;
+    z-index: auto;
 }
 
 @media (max-width: 850px) {
