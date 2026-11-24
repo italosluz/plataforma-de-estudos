@@ -14,13 +14,20 @@ export function folhaRedacao() {
     // para guardá-la em memória e reutilizar como molde sempre que novas páginas forem criadas
     const moldeFolha = areaImpressao.querySelector(".folha").cloneNode(true);
 
+    const observador = new ResizeObserver(() => {
+        const tamanhoTela = document.body.clientWidth;
+        const tamanhoZoomFolha = Math.min((tamanhoTela / 1000), 1);
+
+        areaImpressao.querySelectorAll(".folha").forEach((folha) => {
+            areaImpressao.style.setProperty("--escala-folha", tamanhoZoomFolha);
+        });
+    });
+
+    observador.observe(document.body);
+
     function atualizarBotaoAtivo(qtd) {
-        // Percorre cada botão (ENEM, Fuvest, Unicamp...)
         botoesPreset.forEach((btn) => {
-            // Lê o valor de data-linhas (que vem como texto), converte para número
-            // e adiciona a classe "ativo" se for igual a qtd (ou remove se for diferente)
             btn.classList.toggle("ativo", Number(btn.dataset.linhas) === qtd);
-            console.log(Number(btn.dataset.linhas), qtd);
         });
     }
 
@@ -91,7 +98,6 @@ export function folhaRedacao() {
 
     botoesPreset.forEach((botao) => {
         botao.addEventListener("click", (event) => {
-            console.log("Oi")
             const quantidade = Number(event.target.dataset.linhas);
             inputLinhas.value = quantidade;
             gerarLinhas(quantidade);
